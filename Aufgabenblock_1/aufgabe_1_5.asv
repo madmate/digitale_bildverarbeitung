@@ -1,0 +1,26 @@
+% Aufgabe 1.1: Laden von unterschiedlichen Bildtypen und Darstellung
+%
+% Wolfgang Ensinger 22.05.07
+close all;
+clear all;
+% Lade erstes Grauwertbild
+one = imread('picture3_gray.BMP');
+two = imread('picture4_gray.bmp');
+
+min_one = min(one);
+min_two = min(two);
+max_one = max(one);
+max_two = max(two);
+mean2_one = mean2(one);
+mean2_two = mean2(two);
+std2_one = std2(one);
+std2_two = std2(two);
+
+fprintf('Picture One min: %a, max: %b, ')
+
+subplot(3, 2, 1), imhist(one);
+subplot(3, 2, 2), imhist(two);
+subplot(3, 2, 3), imshow(one);
+subplot(3, 2, 4), imshow(two);
+subplot(3, 2, 5), imshow(60 > one);
+subplot(3, 2, 6), imshow(two > 200);
